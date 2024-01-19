@@ -1,0 +1,859 @@
+/*Importing Fonts */
+@font-face {
+    font-family: "SF-Pro-Display";
+    src: url("/fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF-Pro-Display";
+    src: url("/fonts/SF-Pro-Display-RegularItalic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: "SF-Pro-Display-Medium";
+    src: url("/fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF-Pro-Display-Medium";
+    src: url("/fonts/SF-Pro-Display-MediumItalic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SF-Semibold";
+    src: url("/fonts/FontsFree-Net-SFProDisplay-Semibold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF-Pro-Display";
+    src: url("/fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF-Pro-Display";
+    src: url("/fonts/SF-Pro-Display-BoldItalic.otf") format("opentype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+/* Setting common colours(ones in design system) */
+:root {
+    --light-sea-green: #20A39E;
+    --blue-ocean: #1C89D8;
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    background-color: #FFFFFF;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 6px #00000029;
+    opacity: 1;
+    /* floating menu bar */
+    position: fixed;
+    top: 0;
+    margin: 0;
+    z-index: 100;
+}
+
+.logo img {
+    margin-left: 7vw;
+    width: 8em;
+    height: auto;
+    flex-grow: 3;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    margin-left: 7vw;
+}
+
+nav ul li {
+    padding-right: 5vw;
+    font-family: "SF-Pro-Display";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    list-style-type: none;
+
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+    padding-bottom: 5px;
+    border-bottom-style: solid;
+    border-color: white;
+
+}
+
+nav ul li a:hover {
+    border-color: var(--light-sea-green);
+}
+
+
+
+nav ul :nth-child(4) {
+    padding-right: 0px;
+}
+
+nav svg {
+    padding-top: 7px;
+    padding-left: 5px;
+}
+
+/*Nav bar CTAs*/
+.onboarding {
+    margin-right: 7vw;
+    font-family: "SF-Pro-Display-Medium";
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.onboarding a {
+    text-decoration: none;
+    color: #20A39E;
+    font-size: 23px;
+
+}
+
+.onboarding button {
+    width: 160px;
+    height: 50px;
+    border-radius: 30px;
+    margin-left: 20px;
+    box-shadow: 0px 3px 6px #00000029;
+    border: none;
+    background: var(--blue-ocean);
+}
+
+.onboarding button:hover {
+    background-color: var(--light-sea-green);
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--blue-ocean);
+}
+
+.onboarding button a {
+    color: white;
+}
+
+/* Navbar responsiveness */
+/* Hamburger Icon */
+#menu-checkbox,
+#menu-icon {
+    position: absolute;
+    left: 2vw;
+    cursor: pointer;
+    display: none;
+    font-size: 1.6em;
+    padding-bottom: 6px;
+    z-index: 200;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    nav {
+        position: absolute;
+        margin-top: 314px;
+        display: none;
+        width: 100%;
+        justify-content: center;
+        background-color: white;
+        box-shadow: 0px 10px 6px #00000029;
+    }
+
+    nav ul {
+        display: flex;
+        width: 100px;
+        padding: 20px;
+        flex-wrap: wrap;
+        margin: 0;
+
+    }
+
+    nav ul li {
+        padding-bottom: 30px;
+    }
+
+    #menu-icon {
+        display: flex;
+    }
+
+    #menu-checkbox:checked~nav {
+        display: flex;
+    }
+
+    .onboarding {
+        position: absolute;
+        right: 0px;
+    }
+}
+
+/*Code for above the fold of the landing page */
+.abovethefoldtext {
+    margin-left: 7vw;
+    margin-top: 15vh;
+}
+
+.abovethefoldtext h1 {
+    font-family: "SF-Pro-Display-Medium";
+    font-weight: normal;
+    font-style: italic;
+    color: var(--blue-ocean);
+    font-size: 75px;
+    width: 36vw;
+    margin: 280px 0 40px 0;
+    z-index: 9;
+}
+
+.abovethefoldtext h2 {
+    font-family: "SF-Pro-Display";
+    font-weight: normal;
+    font-style: normal;
+    color: #5F6D91;
+    font-size: 34px;
+    letter-spacing: 1.5px;
+    width: 400px;
+    margin-bottom: 80px;
+}
+
+.abovethefoldtext button {
+    width: 300px;
+    height: 75px;
+    border-radius: 60px;
+    box-shadow: 0px 3px 6px #00000029;
+    border: none;
+    background: #0EC7C0;
+
+}
+
+.abovethefoldtext button a {
+    font-family: "SF-Semibold";
+    font-weight: Normal;
+    font-style: normal;
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+
+}
+
+.abovethefoldimages img {
+    position: absolute;
+    z-index: -1;
+}
+
+#heroimg {
+    right: 14vw;
+    top: 130px;
+    width: 840px;
+    z-index: 1;
+    display: flex;
+}
+
+#abstract-right {
+    right: -250px;
+    top: 200px;
+}
+
+#abstract-left {
+    right: 780px;
+    top: 150px;
+}
+
+/* so that the lines do not overlap with the text */
+@media screen and (max-width: 1700px) {
+    #abstract-left {
+        opacity: 0.2;
+
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    #heroimg {
+        right: 5vw;
+    }
+
+}
+
+@media screen and (max-width: 1320px) {
+    #heroimg {
+        top: 30%;
+        width: 50%;
+    }
+
+    #abstract-left {
+        left: 45%;
+        width: 20%;
+        top: 28%;
+    }
+}
+
+/* Mobile responsiveness for above the fold */
+@media screen and (max-width: 800px) {
+    #heroimg {
+        display: none;
+    }
+
+    #abstract-left {
+        display: none;
+    }
+
+    #abstract-right {
+        opacity: 0.3;
+    }
+
+}
+
+/* Popular Services */
+
+.popularservices h1 {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 50px;
+    margin-bottom: 50px;
+    margin-left: 7vw;
+}
+
+.popularservices {
+    margin-top: 400px;
+
+}
+
+.popular-service-containers {
+    position: relative;
+    margin-left: calc(7vw - 20px);
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 100px;
+    padding-bottom: 10px;
+}
+
+.servicecontainer {
+    height: 390px;
+    width: 397px;
+    border-radius: 10px;
+    padding: 20px;
+    padding-bottom: 0px;
+    margin-right: 84px;
+}
+
+.servicecontainer h3 {
+    z-index: 5;
+    position: absolute;
+    width: 377px;
+    height: 28px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px -4px 12px #00000029;
+    top: 267px;
+    font-family: "SF-Pro-Display-Medium";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 35px;
+    background-color: white;
+    padding-left: 20px;
+    padding-bottom: 100px;
+    padding-top: 16px;
+}
+
+
+/* What we offer */
+.good-offer {
+    display: flex;
+    justify-content: space-between;
+    border: #3178AC;
+    border: 1px solid var(--unnamed-color-707070);
+    border: 1px solid #707070;
+    box-shadow: 0px 7px 13px #00000029;
+    border-radius: 15px;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    margin-bottom: 110px;
+}
+
+.good-offer ul {
+    list-style-type: none;
+    padding: 48px;
+}
+
+.good-offer h1 {
+    font-family: "SF-Semibold";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.good-offer h1 span {
+    color: var(--light-sea-green);
+}
+
+.good-offer h2 {
+    font-family: "SF-Pro-Display-Medium";
+    font-size: 30px;
+}
+
+.good-offer h2 {
+    font-family: "SF-Pro-Display-Medium";
+    font-size: 30px;
+}
+
+.good-offer h3 {
+    color: #5f6d91;
+}
+
+.outstandingpoints {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.outstandingpoints span {
+    color: var(--light-sea-green);
+}
+
+.pointcontainer {
+    display: flex;
+    padding: 21px 0 21px;
+    align-items: center;
+}
+
+.pointcontainer img {
+    margin-right: 22px;
+}
+
+#onboardingoffer img {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#supportoffer img {
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.offerphoto img {
+    border-radius: 0 15px 15px 0;
+    height: 100%;
+    width: 42.5vw;
+    object-fit: cover;
+
+}
+
+/*  Offer responsiveness */
+@media screen and (max-width: 1200px) {
+    .good-offer {
+        flex-direction: column;
+    }
+
+    .offerphoto img {
+        width: 100%;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .good-offer {
+        margin-bottom: 60px;
+    }
+}
+
+/* Reimagine talent CTA */
+.reimagine {
+    display: flex;
+    border: 1px solid var(--unnamed-color-707070);
+    border: 1px solid #707070;
+    box-shadow: 0px 7px 13px #00000029;
+    border-radius: 15px;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    margin-bottom: 350px;
+}
+
+.reimagine img {
+    width: 42.5vw;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+
+}
+
+.reimagine ul {
+    list-style-type: none;
+    width: 29vw;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 10vw;
+}
+
+.reimagine h1 {
+    font-family: "SF-Pro-Display-Medium";
+    font-size: 3.5vw;
+    padding-block: 10px;
+}
+
+.reimagine h1 span {
+    color: #44C4B2;
+}
+
+.reimagine button {
+    width: 290px;
+    height: 70px;
+    border-radius: 40px;
+    box-shadow: 0px 7px 9px #00000029;
+    border: none;
+    background: var(--blue-ocean);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+.reimagine button a {
+    color: white;
+    text-decoration: none;
+    font-size: 35px;
+    font-family: "SF-Pro-Display-Medium";
+    font-weight: normal;
+    font-style: normal;
+}
+
+.reimagine :nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .reimagine button {
+        width: 200px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+
+    .reimagine button a {
+        font-size: 25px;
+    }
+
+    .reimagine h1 {
+        font-size: 5vw;
+        text-align: right;
+    }
+
+    .reimagine ul {
+        padding-left: 6vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .reimagine {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reimagine img {
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .reimagine h1 {
+        font-size: 6vw;
+        text-align: center;
+    }
+
+    .reimagine button {
+        width: 150px;
+        height: 50px;
+    }
+
+    .reimagine button a {
+        font-size: 18px;
+    }
+
+    .reimagine ul {
+        align-items: center;
+        padding: 0;
+    }
+
+}
+
+
+
+/* Footer */
+footer {
+    color: white;
+    background-color: #3178AC;
+    width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    padding-block: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    list-style-type: none;
+
+}
+
+.footer-links h4 {
+    font-size: 25px;
+    font-family: "SF-Pro-Display-Medium";
+    font-weight: normal;
+    font-style: normal;
+    padding: 7px 0 7px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    padding: 7px 0 7px 0;
+    font-size: 18px;
+    font-family: "SF-Pro-Display";
+    font-weight: normal;
+    font-style: normal;
+    color: #d4d4d4;
+
+}
+
+.lastlogo h4 {
+    letter-spacing: 1.5px;
+}
+
+.lastlogo h5 {
+    font-size: 20px;
+    max-width: 300px;
+}
+
+footer hr {
+    margin: 0;
+}
+
+footer h3 {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Footer responsiveness */
+@media screen and (max-width: 886px) {
+    .footer-links :nth-child(5) {
+        flex-basis: 56%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer-links {
+        flex-direction: column;
+    }
+}
+
+
+
+/* Second page */
+.login {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login h1 {
+    font-size: 50px;
+    font-family: "SF-Pro-Display-Medium";
+    font-weight: normal;
+    font-style: normal;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+.login h1 span {
+    color: var(--blue-ocean);
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+}
+
+#email {
+    width:615px;
+    height:50px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #707070;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.password {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+
+}
+
+#pwd {
+    width:615px;
+    height:50px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #707070;
+    box-shadow: 0px 3px 6px #00000029;
+    
+}
+
+.login label {
+    padding-bottom: 4px;
+}
+
+.login h3 span {
+    color:var(--light-sea-green)
+}
+.login h3 {
+    opacity: 0.6;
+    justify-content: center;
+}
+
+#submit {
+    width:160px;
+    height:55px;
+    background-color: var(--blue-ocean);
+    border-radius: 30px;
+    border-width: 1px;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.submitbutton {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+/* 3rd page (Talents grid page) */
+
+
+.design h1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+    padding-block: 100px;
+    font-family: "SF-Pro-Display";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    color: var(--blue-ocean);
+}
+
+.design-talents {
+    display: flex;
+    margin-left:calc(6vw - 80px);
+    margin-right:calc(6vw - 80px);
+    column-gap: 80px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: left;
+    margin-bottom: 150px;
+
+}
+.design-talents ul{
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding:30px;
+    border-radius: 10px;
+    border-color: #707070;
+    box-shadow: 0px 3px 6px #00000029; 
+    background-color: white;
+    border-bottom-color: var(--blue-ocean);
+    border-bottom-width: 20px;
+}
+
+.design-talents ul:hover {
+    border-color: var(--blue-ocean);
+    border-top-width:-2px;
+    border-left-width:-2px;
+    border-right-width:-2px;
+    cursor: pointer;
+}
+
+#nameofprofile {
+    font-family: "SF-Pro-Display-Medium";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25px;
+}
+
+#jobtitle {
+    font-family:"SF-Pro-Display";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+} 
+#jobcount span {
+    color: var(--blue-ocean);
+    font-size: 20px;
+}
+
+#jobcount {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#reviewcount span {
+    color: var(--light-sea-green);
+}
+
+#reviewcount{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#skillset {
+    font-family:"SF-Pro-Display-Medium";
+    font-style: normal;
+    font-style: normal;
+    font-size: 20px;
+    color: #4C4C4C;   
+    text-align: center; 
+}
+
+

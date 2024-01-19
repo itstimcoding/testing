@@ -1,0 +1,28 @@
+/* Resetting margins, paddings, and borders */
+/*Setting up default font for the website */
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+figure,
+fieldset, legend {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  
+  font-family:"SF-Pro-Display";
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+/*Prevent horizontal scrolling */
+body, html {
+  overflow-x:hidden;
+}
+/* Global box-sizing rule (Removed because it was messing with my code)
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*/
